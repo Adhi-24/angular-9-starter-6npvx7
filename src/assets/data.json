@@ -1,0 +1,44 @@
+{
+  "companies": [
+    {
+      "productId": "446",
+      "list": "Google"
+    },
+    {
+      "productId": 459,
+      "list": "Apple"
+    },
+    {
+      "productId": 461,
+      "list": "Tesla"
+    },
+    {
+      "productId": 465,
+      "list": "Amazon"
+    },
+    {
+      "productId": 469,
+      "list": "Zoho"
+    },
+    {
+      "productId": 401,
+      "list": "Tcs"
+    },
+    {
+      "productId": 402,
+      "list": "Infosys"
+    },
+    {
+      "productId": 403,
+      "list": "CTS"
+    },
+    {
+      "productId": 404,
+      "list": "Meta"
+    },
+    {
+      "productId": 405,
+      "list": "Wipro"
+    }
+  ]
+}

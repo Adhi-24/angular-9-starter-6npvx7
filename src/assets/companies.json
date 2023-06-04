@@ -1,0 +1,44 @@
+{
+  "companies": [
+    {
+      "productId": "001",
+      "list": "Faxcon"
+    },
+    {
+      "productId": "002",
+      "list": "Idp"
+    },
+    {
+      "productId": "003",
+      "list": "Virtusa"
+    },
+    {
+      "productId": "004",
+      "list": "Data Matrics"
+    },
+    {
+      "productId": "005",
+      "list": "Road Map"
+    },
+    {
+      "productId": "006",
+      "list": "Red Blox"
+    },
+    {
+      "productId": "007",
+      "list": "Flipkart"
+    },
+    {
+      "productId": "008",
+      "list": "Jio"
+    },
+    {
+      "productId": "009",
+      "list": "Net Meds"
+    },
+    {
+      "productId": "110",
+      "list": "Samsung"
+    }
+  ]
+}

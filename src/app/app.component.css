@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+}
+.search-container {
+  margin-top: 0px;
+}
+.list {
+  list-style: none;
+}
+.searchbox {
+  margin-left: 2.5rem;
+}

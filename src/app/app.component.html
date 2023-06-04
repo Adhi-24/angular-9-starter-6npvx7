@@ -1,0 +1,20 @@
+<div>
+  <input
+    class="searchbox"
+    type="text"
+    [(ngModel)]="searchText"
+    (input)="filterCompanies()"
+    placeholder="Search"
+    (focus)="showDropdownList()"
+  />
+  <button class="btn" (click)="createCompany()">add</button>
+  <ul class="search-container" *ngIf="showDropdown">
+    <li class="list" *ngFor="let company of filteredCompanies; let i = index">
+      <input
+        type="text"
+        [(ngModel)]="filteredCompanies[i].list"
+        (input)="updateCompany(filteredCompanies[i])"
+      />
+    </li>
+  </ul>
+</div>
