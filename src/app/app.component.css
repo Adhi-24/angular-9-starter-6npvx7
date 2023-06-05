@@ -10,7 +10,7 @@ p {
 .searchbox {
   margin-left: 2.5rem;
 }
-/* .arrow {
+.arrow {
   border: solid black;
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -20,13 +20,15 @@ p {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
   margin-left: -0.6rem;
+  cursor: pointer;
 }
 
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   margin-left: -0.6rem;
-} */
+  cursor: pointer;
+}
 .nl-1 {
   margin-left: -1rem;
 }
@@ -52,5 +54,9 @@ p {
   -webkit-transform: rotate(45deg);
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
+}
+
+.addBtn {
   cursor: pointer;
 }

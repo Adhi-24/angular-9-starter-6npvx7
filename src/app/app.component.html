@@ -5,10 +5,11 @@
     [(ngModel)]="searchText"
     (input)="filterCompanies()"
     placeholder="Search"
-    (focus)="showDropdownList()"
+    (focus)="togglebtn()"
   />
 
-  <span class="dropdown-icon arrow up"></span>
+  <span *ngIf="showIcon" class="arrow up nl-1" (click)="togglebtn()"></span>
+  <span *ngIf="!showIcon" class="arrow down nl-1" (click)="togglebtn()"></span>
 
   <button class="btn" (click)="createCompany()">add</button>
   <ul class="search-container" *ngIf="showDropdown">
@@ -21,11 +22,3 @@
     </li>
   </ul>
 </div>
-
-<!-- <app-search-dropdown
-  [items]="filteredCompanies"
-  [size]="'small'"
-  [label]="'list'"
-  [uid]="'productId'"
-  [(ngModel)]="selectedCompany"
-></app-search-dropdown> -->

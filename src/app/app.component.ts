@@ -20,11 +20,17 @@ export class AppComponent {
   noResultsFound: boolean = false;
   dropdownSearchText: string = '';
   filteredList: Company[] = [];
+  showIcon: boolean = false;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.fetchCompanies();
+  }
+
+  togglebtn() {
+    this.showIcon = !this.showIcon;
+    this.showDropdown = !this.showDropdown;
   }
 
   fetchCompanies() {
@@ -41,10 +47,6 @@ export class AppComponent {
       this.filteredCompanies = this.companies.slice();
       this.checkNoResults();
     });
-  }
-
-  showDropdownList() {
-    this.showDropdown = true;
   }
 
   toggleDropdown() {
