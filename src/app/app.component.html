@@ -7,6 +7,9 @@
     placeholder="Search"
     (focus)="showDropdownList()"
   />
+
+  <span class="dropdown-icon arrow up"></span>
+
   <button class="btn" (click)="createCompany()">add</button>
   <ul class="search-container" *ngIf="showDropdown">
     <li class="list" *ngFor="let company of filteredCompanies; let i = index">
@@ -18,3 +21,11 @@
     </li>
   </ul>
 </div>
+
+<!-- <app-search-dropdown
+  [items]="filteredCompanies"
+  [size]="'small'"
+  [label]="'list'"
+  [uid]="'productId'"
+  [(ngModel)]="selectedCompany"
+></app-search-dropdown> -->

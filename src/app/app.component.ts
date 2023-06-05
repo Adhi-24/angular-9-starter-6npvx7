@@ -18,6 +18,8 @@ export class AppComponent {
   searchText: string = '';
   showDropdown: boolean = false;
   noResultsFound: boolean = false;
+  dropdownSearchText: string = '';
+  filteredList: Company[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -35,7 +37,7 @@ export class AppComponent {
 
   companyList() {
     this.http.get<any>('assets/companies.json').subscribe((data) => {
-      this.companies = data.companies;
+      this.companies.push(data.companies);
       this.filteredCompanies = this.companies.slice();
       this.checkNoResults();
     });
@@ -43,6 +45,10 @@ export class AppComponent {
 
   showDropdownList() {
     this.showDropdown = true;
+  }
+
+  toggleDropdown() {
+    this.showDropdown = !this.showDropdown;
   }
 
   createCompany(company: Company) {
@@ -75,11 +81,23 @@ export class AppComponent {
     if (!this.searchText) {
       this.filteredCompanies = this.companies.slice();
     } else {
+      const searchValue = this.searchText.toLowerCase();
       this.filteredCompanies = this.companies.filter((company) =>
-        company.list.toLowerCase().includes(this.searchText.toLowerCase())
+        company.list.toLowerCase().includes(searchValue)
       );
     }
     this.checkNoResults();
+  }
+
+  filterDropdownItems() {
+    if (!this.dropdownSearchText) {
+      this.filteredList = this.filteredCompanies.slice();
+    } else {
+      const searchValue = this.dropdownSearchText.toLowerCase();
+      this.filteredList = this.filteredCompanies.filter((company) =>
+        company.list.toLowerCase().includes(searchValue)
+      );
+    }
   }
 
   checkNoResults() {

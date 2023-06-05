@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { DropdownSearchComponent } from './hello.component';
-import { SearchDropdown } from './search-dropdown/search-dropdown';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchDropdown } from './search-dropdown/search-dropdown.component';
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
-  declarations: [AppComponent, DropdownSearchComponent, SearchDropdown],
+  declarations: [AppComponent, SearchDropdown],
+  exports: [SearchDropdown],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
